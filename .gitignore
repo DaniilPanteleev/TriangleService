@@ -2,3 +2,4 @@
 target/
 .allure
 *.txt
+*.iml

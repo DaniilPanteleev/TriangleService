@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All">
+    <listeners>
+        <listener class-name="listeners.AllureTestIdListener"/>
+    </listeners>
+
+    <test name="Positive triangle tests">
+        <classes>
+            <class name="functional.TriangleCreationTest"/>
+        </classes>
+    </test>
+
+    <test name="Negative triangle tests">
+        <classes>
+            <class name="functional.NegativeTriangleTest"/>
+        </classes>
+    </test>
+
+    <test name="Perimeter calculation">
+        <classes>
+            <class name="functional.CalculatingPerimeterTest"/>
+        </classes>
+    </test>
+
+    <test name="Area calculation">
+        <classes>
+            <class name="functional.CalculatingAreaTest"/>
+        </classes>
+    </test>
+
+    <test name="Getting triangle">
+        <classes>
+            <class name="functional.GettingTriangleTest"/>
+        </classes>
+    </test>
+
+    <test name="Deleting triangle">
+        <classes>
+            <class name="functional.DeletingTriangleTest"/>
+        </classes>
+    </test>
+
+</suite>

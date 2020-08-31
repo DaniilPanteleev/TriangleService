@@ -1,0 +1,82 @@
+[
+  {
+    "id": "TRGL-10",
+    "title": "Triangle creation with negative value's sides",
+    "expectedStatusCode": 422,
+    "expectedError": "UNPROCESSABLE",
+    "triangle": {
+      "input": "-3;-4;-5"
+    }
+  },
+  {
+    "id": "TRGL-11",
+    "title": "Triangle creation with number separator",
+    "expectedStatusCode": 422,
+    "expectedError": "UNPROCESSABLE",
+    "triangle": {
+      "separator": "9",
+      "input": "39495"
+    }
+  },
+  {
+    "id": "TRGL-12",
+    "title": "Unauthorized triangle creation",
+    "expectedStatusCode": 401,
+    "isRequestSpecExist": false,
+    "expectedError": "UNAUTHORIZED"
+  },
+  {
+    "id": "TRGL-13",
+    "title": "Create impossible triangle",
+    "expectedStatusCode": 422,
+    "expectedError": "UNPROCESSABLE",
+    "triangle": {
+      "input": "1;20;3"
+    }
+  },
+  {
+    "id": "TRGL-14",
+    "title": "Create triangle with empty field - separator",
+    "expectedStatusCode": 422,
+    "expectedError": "UNPROCESSABLE",
+    "triangle": {
+      "separator": "",
+      "input": "1;20;3"
+    }
+  },
+  {
+    "id": "TRGL-15",
+    "title": "Create triangle with 0 length sides",
+    "expectedStatusCode": 422,
+    "isTriangleStoreFull": false,
+    "expectedError": "UNPROCESSABLE",
+    "triangle": {
+      "input": "0;0;0"
+    }
+  },
+  {
+    "id": "TRGL-16",
+    "title": "Create more then 10 triangles",
+    "expectedStatusCode": 422,
+    "isTriangleStoreFull": true,
+    "expectedError": "LIMIT"
+  },
+  {
+    "id": "TRGL-17",
+    "title": "Create triangle with empty field - input",
+    "expectedStatusCode": 422,
+    "expectedError": "UNPROCESSABLE",
+    "triangle": {
+      "input": ""
+    }
+  },
+  {
+    "id": "TRGL-18",
+    "title": "Create triangle without field - input",
+    "expectedStatusCode": 422,
+    "expectedError": "UNPROCESSABLE",
+    "triangle": {
+      "separator": ";"
+    }
+  }
+]

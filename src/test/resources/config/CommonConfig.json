@@ -1,0 +1,9 @@
+{
+  "services": [
+    {
+      "alias": "TRIANGLE",
+      "url": "https://qa-quiz.natera.com",
+      "basePath": "/triangle"
+    }
+  ]
+}
